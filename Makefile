@@ -6,7 +6,7 @@
 #    By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/13 11:50:11 by aaudi             #+#    #+#              #
-#    Updated: 2026/11/13 23:11:03 by aaudi            ###   ########.fr        #
+#    Updated: 2026/11/16 17:15:17 by aaudi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,15 @@ SRCS	= ft_atoi.c \
 		  ft_strlcat.c \
 		  ft_strmapi.c \
 		  ft_strrchr.c \
-		  ft_tolower.c
+		  ft_tolower.c \
+		  ft_lstnew.c \
+		  ft_lstadd_front.c \
+		  ft_lstsize.c \
+		  ft_lstlast.c \
+		  ft_lstadd_back.c \
+		  ft_lstdelone.c \
+		  ft_lstclear.c \
+		  ft_lstiter.c
 
 OBJS = $(SRCS:.c=.o)
 
