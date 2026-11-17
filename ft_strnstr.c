@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 22:35:53 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/13 16:03:10 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/17 12:25:20 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 // int main(void)
 // {
 // 	char big[] = "hello world back";
-// 	char little[] = "lo";
-// 	printf ("%s", ft_strnstr(big, little, 3));
+// 	char little[] = "o ";
+// 	printf ("%s", ft_strnstr(big, little, 5));
 // }

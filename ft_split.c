@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 11:19:52 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/16 22:44:59 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/17 17:21:55 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,24 +38,38 @@ static void	free_all(char **arr, size_t n)
 	free(arr);
 }
 
-static char	*get_word(char const *s, char c, size_t *i)
+static char	**fill(char **arr, char const *s, char c, size_t words)
 {
-	size_t	start;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
-	while (s[*i] == c)
-		(*i)++;
-	start = *i;
-	while (s[*i] != '\0' && s[*i] != c)
-		(*i)++;
-	return (ft_substr(s, start, *i - start));
+	i = 0;
+	k = 0;
+	while (k < words)
+	{
+		while (s[i] == c)
+			i++;
+		j = i;
+		while (s[j] != '\0' && s[j] != c)
+			j++;
+		arr[k] = ft_substr(s, i, j - i);
+		if (arr[k] == NULL)
+		{
+			free_all(arr, k);
+			return (NULL);
+		}
+		i = j;
+		k++;
+	}
+	arr[k] = NULL;
+	return (arr);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	k;
-	size_t	words;
 	char	**arr;
+	size_t	words;
 
 	if (s == NULL)
 		return (NULL);
@@ -63,20 +77,7 @@ char	**ft_split(char const *s, char c)
 	arr = malloc((words + 1) * sizeof(char *));
 	if (arr == NULL)
 		return (NULL);
-	i = 0;
-	k = 0;
-	while (k < words)
-	{
-		arr[k] = get_word(s, c, &i);
-		if (arr[k] == NULL)
-		{
-			free_all(arr, k);
-			return (NULL);
-		}
-		k++;
-	}
-	arr[k] = NULL;
-	return (arr);
+	return (fill(arr, s, c, words));
 }
 
 // int	main(void)
