@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 17:23:13 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/13 23:27:47 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/22 13:29:10 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	a = ft_strlen(s1);
 	b = ft_strlen(s2);
 	str = malloc(a + b + 1);
-	if (str == NULL)
+	if (!s1 || !s2)
 		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')

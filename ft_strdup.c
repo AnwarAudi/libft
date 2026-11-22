@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 21:34:04 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/11 15:45:34 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/22 13:24:42 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *src)
 	int		i;
 
 	i = 0;
+	if (!src)
+		return (NULL);
 	while (src[i])
 		i++;
 	dest = malloc(i * sizeof(char) + 1);

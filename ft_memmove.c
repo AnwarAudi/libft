@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 16:59:38 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/11 15:45:55 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/22 13:21:41 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	s = (const unsigned char *)src;
 	d = (unsigned char *)dest;
 	i = 0;
+	if (!dest || !src)
+		return (NULL);
 	if (d < s)
-	{
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
+		ft_memcpy(d, s, n);
 	else
 	{
 		i = n;

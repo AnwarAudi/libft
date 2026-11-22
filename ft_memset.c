@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 12:53:32 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/11 15:45:44 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/22 13:23:13 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memset(void *str, int c, size_t n)
 
 	s = (unsigned char *)str;
 	i = 0;
+	if (!str)
+		return (NULL);
 	while (i < n)
 	{
 		s[i] = c;

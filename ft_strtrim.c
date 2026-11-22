@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 17:53:04 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/13 23:42:01 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/22 13:33:20 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	k;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	while (s1[start] != '\0' && skip(s1[start], set))
 		start++;
@@ -55,7 +57,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int main(void)
 // {
-// 	char *s1 = "ali is ali";
+// 	char *s1 = "lilakhalilak";
 // 	char *set = "ali";
 // 	printf("%s", ft_strtrim(s1, set));
 // }

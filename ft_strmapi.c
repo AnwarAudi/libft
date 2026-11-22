@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 02:29:42 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/13 02:43:17 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/18 00:45:42 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 	unsigned int	i;
 
+	if (!s || !f)
+		return (NULL);
 	i = 0;
 	str = malloc(ft_strlen(s) + 1);
 	if (str == NULL)

@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 22:22:48 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/11 15:46:21 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/18 16:23:19 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// int	main(void)
+// {
+// 	printf("ft:   %d\n", ft_memcmp("abc", "abd", 3));
+// 	printf("real: %d\n", memcmp("abc", "abd", 3));
+// 	return (0);
+// }

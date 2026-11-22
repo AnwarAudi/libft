@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 22:35:53 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/17 12:25:20 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/22 13:30:34 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
+	if (!big || !little)
+		return (NULL);
 	if (little[i] == '\0')
 		return ((char *)big);
 	while (big[i] != '\0' && i < len)

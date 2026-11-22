@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 11:19:52 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/17 17:21:55 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/18 13:08:51 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,11 +82,17 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	//char const *str = " hello world 4567 ";
-// 	//char c = ' ';
-// 	char **alissa = ft_split("  tripouille  42  ", ' ');
-// 	for (size_t i = 0; i < 6; i++)
+// 	char	**res;
+// 	int		i;
+
+// 	res = ft_split("hello world 42", ' ');
+// 	i = 0;
+// 	while (res[i])
 // 	{
-// 		printf("%s\n", alissa[i]);
+// 		printf("%s\n", res[i]);
+// 		free(res[i]);
+// 		i++;
 // 	}
+// 	free(res);
+// 	return (0);
 // }

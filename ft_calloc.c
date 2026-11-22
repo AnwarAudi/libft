@@ -6,7 +6,7 @@
 /*   By: aaudi <aaudi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 10:54:15 by aaudi             #+#    #+#             */
-/*   Updated: 2026/11/13 16:19:16 by aaudi            ###   ########.fr       */
+/*   Updated: 2026/11/18 16:20:01 by aaudi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	total;
 	size_t	i;
 
+	if (nmemb == 0 || size == 0)
+		return (malloc(1));
 	if (nmemb != 0 && size > __SIZE_MAX__ / nmemb)
 		return (NULL);
 	total = nmemb * size;
